@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./parts/header'); -%>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <!-- TEXTO INTRO -->
+    <div class="container-fluid">
+      <blockquote class="blockquote text-justify" style="margin:30px;">
+        <p> Esta herramienta sirve para reconocer 5 tipos de danzas bolivianas. 
+        El modelo fue entrenado con exactamente 1256 imagenes con las danzas Caporales, Diablada, Morenada, Salay y Tinkuy.
+        Se tiene entre un 60 a 70% de precision al evaluar una imagen.</p>
+        <footer class="blockquote-footer">Estudiante: Mahjief E. Duran Orozco</footer>
+      </blockquote>
+    </div>
+
+    <!-- CUERPO -->
+
+    <div class="d-flex justify-content-center">
+      <h4 id ='status' style="opacity: 0;">Cargando Modelo... </h4>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <img id="foto" src = "/images/img.png">
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
+      <button class = "btn btn-primary" type="button" value="Submit" onclick = "start()">Submit</button>
+    </div>
+    <div class="d-flex justify-content-center">
+      Danza:
+      <p id = "Result"></p>
+    </div>
+    <div class="d-flex justify-content-center">
+      Probabilidad:
+      <p id = "Probability"></p>
+    </div>
+    <div>
+        <p><b>Nota:</b> Solo una imagen puede ser subida a la vez</p>
+    </div> 
+    
+    <script src="/javascripts/funciones.js"></script>
+    <script src = "/javascripts/test.js" > </script>
+
+  </body>
+</html>
